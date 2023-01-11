@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <center>
+    <header> 
+          <link rel="stylesheet" href="{% static 'home.css' %}"
+    </header>
+    <div class="logo">
+        <h1>Know Your Polling Unit Results</h1>
+    </div>
+    <div class="bar">
+      <input class="searchbar" type="text" title="Input Party Abbreviation...">
+      <a href="#"> <img class="search" src="url" title="Search"></a>
+    </div>
+   
+    <div class="buttons">
+        <h1 class="button">Polling Unit</h1>
+        <h3 class="button" >Result ID : {{polling_unit.result_id}}</h3>
+        <h3 class="button">Party Abbreviation : {{polling_unit.party_abbreviation}}</h3>
+        <h3 class="button">Party Score : {{polling_unit.party_score}}</h3>
+        {{polling_unit.polling_unit_uniqueid}}
+     </div>
+  </center>
+  </body>
+  </html>
