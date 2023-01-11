@@ -9,8 +9,11 @@
         <h1>Know Your Polling Unit Results</h1>
     </div>
     <div class="bar">
-      <input class="searchbar" type="text" title="Input Party Abbreviation...">
-      <a href="#"> <img class="search" src="url" title="Search"></a>
+      <form method="POST" action="{% url 'home' %}">
+        {% csrf_token %}
+        <input class="searchbar" type="text" name="search" placeholder="Input Result ID">
+        <button type="submit">Input Result ID</button>
+      </form>
     </div>
    
     <div class="buttons">

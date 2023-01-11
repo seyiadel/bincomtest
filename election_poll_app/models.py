@@ -26,7 +26,7 @@ class Announced_Lga_Results(models.Model):
 
 class Announced_Pu_Results(models.Model):
     result_id = models.AutoField(primary_key=True, null= False)
-    polling_unit_uniqueid = models.CharField(max_length=50)
+    polling_unit_uniqueid_id = models.CharField(max_length=50)
     party_abbreviation = models.CharField(max_length=4)
     party_score = models.IntegerField()
     entered_by_user = models.CharField(max_length=50)
@@ -85,7 +85,7 @@ class Polling_Unit(models.Model):
     uniqueid = models.AutoField(primary_key=True, null=False)
     polling_unit_id = models.IntegerField()
     ward_id = models.IntegerField()
-    lga_id = models.IntegerField()
+    lga_id_id = models.IntegerField()
     uniquewardid = models.IntegerField(null=True)
     polling_unit_number = models.CharField(max_length=50, null=True)
     polling_unit_name = models.CharField(max_length=50, null=True)
